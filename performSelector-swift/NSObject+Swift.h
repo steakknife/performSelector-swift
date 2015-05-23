@@ -16,4 +16,11 @@
 - (void)swift_performSelectorInBackground:(SEL)aSelector withObject:(id)arg;
 - (void)swift_performSelectorOnMainThread:(SEL)aSelector withObject:(id)arg waitUntilDone:(BOOL)wait;
 
+- (id)swift_performSelectorIfRespondsTo:(SEL)aSelector;
+- (id)swift_performSelectorIfRespondsTo:(SEL)aSelector withObject:(id)anObject;
+- (id)swift_performSelectorIfRespondsTo:(SEL)aSelector withObject:(id)anObject withObject:(id)anotherObject
+- (void)swift_performSelectorIfRespondsTo:(SEL)aSelector withObject:(id)anObject afterDelay:(NSTimeInterval)delay;
+- (void)swift_performSelectorInBackgroundIfRespondsTo:(SEL)aSelector withObject:(id)arg;
+- (void)swift_performSelectorOnMainThreadIfRespondsTo:(SEL)aSelector withObject:(id)arg waitUntilDone:(BOOL)wait;
+
 @end
