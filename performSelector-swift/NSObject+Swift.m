@@ -44,7 +44,7 @@
 
 - (id)swift_performSelectorIfRespondsTo:(SEL)aSelector
 {
-	if (![self respondsTo:aSelector]) {
+	if (![self respondsToSelector:aSelector]) {
 		return nil;
 	}
 	return [self performSelector:aSelector];
@@ -52,7 +52,7 @@
 
 - (id)swift_performSelectorIfRespondsTo:(SEL)aSelector withObject:(id)anObject
 {
-	if (![self respondsTo:aSelector]) {
+	if (![self respondsToSelector:aSelector]) {
 		return nil;
 	}
 	return [self performSelector:aSelector withObject:anObject];
@@ -60,7 +60,7 @@
 
 - (id)swift_performSelectorIfRespondsTo:(SEL)aSelector withObject:(id)anObject withObject:(id)anotherObject
 {
-	if (![self respondsTo:aSelector]) {
+	if (![self respondsToSelector:aSelector]) {
 		return nil;
 	}
 	return [self performSelector:aSelector withObject:anObject withObject:anotherObject];
@@ -68,7 +68,7 @@
 
 - (void)swift_performSelectorIfRespondsTo:(SEL)aSelector withObject:(id)anArgument afterDelay:(NSTimeInterval)delay
 {
-	if (![self respondsTo:aSelector]) {
+	if (![self respondsToSelector:aSelector]) {
 		return;
 	}
 	[self performSelector:aSelector withObject:anArgument afterDelay:delay];
@@ -76,7 +76,7 @@
 
 - (void)swift_performSelectorInBackgroundIfRespondsTo:(SEL)aSelector withObject:(id)arg
 {
-	if (![self respondsTo:aSelector]) {
+	if (![self respondsToSelector:aSelector]) {
 		return;
 	}
 	[self performSelectorInBackground:aSelector withObject:arg];
@@ -84,7 +84,7 @@
 
 - (void)swift_performSelectorOnMainThreadIfRespondsTo:(SEL)aSelector withObject:(id)arg waitUntilDone:(BOOL)wait
 {
-	if (![self respondsTo:aSelector]) {
+	if (![self respondsToSelector:aSelector]) {
 		return;
 	}
 	[self performSelectorOnMainThread:aSelector withObject:arg waitUntilDone:wait];
